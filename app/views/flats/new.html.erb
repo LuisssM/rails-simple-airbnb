@@ -1,0 +1,12 @@
+<div class="form">
+  <h1>Add your own flat!</h1>
+
+  <%= form_for(@flat) do |f| %>
+    Name: <%= f.text_field :name %><br />
+    Address: <%= f.text_field :address %><br />
+    Description: <%= f.text_area :description %><br />
+    Price: <%= f.number_field :price_per_night %><br />
+    Guests: <%= f.number_field :number_of_guests %><br />
+    <%= f.submit %>
+  <% end %>
+</div>

@@ -1,0 +1,13 @@
+<h1>Flats</h1>
+<ul>
+  <% @flats.each do |flat| %>
+    <li>
+      <div class="card">
+        <h3><%= flat.name %></h3>
+        <p><%= flat.address %></p>
+        <p>(°-°) <%= flat.number_of_guests %> - € <%= flat.price_per_night %></p>
+      </div>
+      <%= link_to "More info", flat_path(flats)%> <%= link_to "Edit", edit_flat_path(flats) %> <%= link_to "Remove", flats_path %>
+    </li>
+  <% end %>
+</ul>
